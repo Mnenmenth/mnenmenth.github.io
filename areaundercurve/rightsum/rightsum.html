@@ -1,0 +1,61 @@
+<!--
+    Made by Earl Kennedy
+    https://github.com
+    https://mnenmenth.github.io
+    Refer to LICENSE file for licensing information
+-->
+
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100% !important; height: 100%; min-width: 100% !important; width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Right Riemann Sum Rule</title>
+    <script src="../mathjs.js"></script>
+    <script src="../libgraph.js"></script>
+    <script>
+        var loc = window.location.href+'';
+        if (loc.indexOf('http://')==0){
+            window.location.href = loc.replace('http://','https://');
+        }
+    </script>
+</head>
+<body style="min-height: 100% !important; height: 100%; min-width: 100% !important; width: 100%; overflow:hidden">
+
+    <div style="width: 100%; height:100%; display:flex;">
+        <div id="inputs" style="float:left; width: 200px; min-width:200px; height:100%">
+            <a href="../index.html">Back</a><br><br>
+
+            <div>
+                Function:
+                <input id="func" type="text">
+            </div>
+
+            <br>
+
+            <div>
+                Interval: [
+                <input id="aval" type="number" style="width:40px">
+                ,
+                <input id="bval" type="number" style="width:40px">
+                ]
+            </div>
+
+            <br>
+
+            <div>
+                Number of Rectangles:
+                <input id="numrect" type="number" style="width:40px">
+            </div>
+
+            <br>
+
+            <button onclick="rightsum()">Calculate</button>
+
+            <script src="rightsum.js"></script>
+            <p id="result"></p>
+        </div>
+        <canvas id="graph" style="float:right; flex:2;"></canvas>
+
+    </div>
+</body>
+</html>
